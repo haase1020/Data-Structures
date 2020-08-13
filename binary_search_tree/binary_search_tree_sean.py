@@ -15,3 +15,30 @@
 # BST                           Array:
 # search: 0(log n)              search (unsorted): 0(n)
 # insertion: 0(log n)           insertion: 0(1)
+
+
+##### Day 4 notes################
+# Recursion
+# Criteria -->
+# 1. criteria that tells us when to stop traversing (base case)
+# 2. some way to "move towards" one of the stopping cirteria
+# 3. a starting point
+
+# non-recursive fn: (iterative)
+def search(arr, target):
+    for n in arr:
+        if n == target:
+            return True
+    return False
+
+# recursive fn:
+
+
+def search(arr, target):
+    if len(arr) == 0:
+        return False
+    if arr[-1] == target:
+        return True
+    return search(arr[:-1])  # include everything but last item
+
+    search([15, 27, 3, 16, 14, 19, 22], 3)
